@@ -1,6 +1,6 @@
 //! `NonZero*` types that derive [`ConstParamTy`] and can be used as constant generic params.
 
-#![allow(incomplete_features)]
+#![allow(incomplete_features, internal_features)]
 #![feature(adt_const_params, rustc_attrs)]
 
 use std::fmt;
