@@ -2,6 +2,9 @@
 name = "nonzero-const-param"
 version = "0.0.1-alpha.1"
 edition = "2021"
+description = "Experimental NonZero* generic consts"
+license = "MIT"
+repository = "https://github.com/yotamofek/nonzero-const-param/"
 
 [dependencies]
 serde = { version = "1", optional = true, features = ["derive"] }
