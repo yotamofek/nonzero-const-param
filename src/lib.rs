@@ -10,7 +10,10 @@ macro_rules! impl_nonzero {
     ($ty:ident, $int:ty, $std:ty) => {
         #[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, ConstParamTy)]
         #[cfg_attr(feature = "serde", derive(serde::Serialize))]
-        #[cfg_attr(feature = "zerocopy", derive(zerocopy::AsBytes, zerocopy::FromBytes))]
+        #[cfg_attr(
+            feature = "zerocopy",
+            derive(zerocopy::AsBytes, zerocopy::FromBytes, zerocopy::FromZeroes)
+        )]
         #[repr(transparent)]
         #[rustc_layout_scalar_valid_range_start(1)]
         #[rustc_nonnull_optimization_guaranteed]
