@@ -43,16 +43,20 @@ macro_rules! impl_nonzero {
                 Self(value)
             }
 
+            #[must_use]
+            #[inline]
             pub const fn get(self) -> $int {
                 self.0
             }
 
+            #[must_use]
             #[inline]
             pub const fn into_std(self) -> $std {
                 // Safety: $std has the same range validity constraints as Self
                 unsafe { <$std>::new_unchecked(self.0) }
             }
 
+            #[must_use]
             #[inline]
             pub const fn from_std(value: $std) -> Self {
                 // Safety: $std has the same range validity constraints as Self
