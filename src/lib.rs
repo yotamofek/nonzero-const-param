@@ -22,6 +22,19 @@ use std::num::ZeroablePrimitive;
 #[repr(transparent)]
 pub struct NonZero<T: ZeroablePrimitive>(T);
 
+pub type NonZeroU8 = NonZero<u8>;
+pub type NonZeroU16 = NonZero<u16>;
+pub type NonZeroU32 = NonZero<u32>;
+pub type NonZeroU64 = NonZero<u64>;
+pub type NonZeroU128 = NonZero<u128>;
+pub type NonZeroUsize = NonZero<usize>;
+pub type NonZeroI8 = NonZero<i8>;
+pub type NonZeroI16 = NonZero<i16>;
+pub type NonZeroI32 = NonZero<i32>;
+pub type NonZeroI64 = NonZero<i64>;
+pub type NonZeroI128 = NonZero<i128>;
+pub type NonZeroIsize = NonZero<isize>;
+
 impl<T: ZeroablePrimitive> NonZero<T> {
     #[doc = r" Creates a non-zero if the given value is not zero."]
     #[must_use]
