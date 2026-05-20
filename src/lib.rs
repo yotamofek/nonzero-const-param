@@ -13,7 +13,7 @@ use std::fmt;
 use std::marker::ConstParamTy;
 use std::num::ZeroablePrimitive;
 
-#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, ConstParamTy)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, ConstParamTy)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 #[cfg_attr(
     feature = "zerocopy",
